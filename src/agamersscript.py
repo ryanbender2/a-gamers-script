@@ -1,24 +1,23 @@
 import logging
-from pathlib import Path
 from typing import List
 from runners.runner import Runner
 from runners.epic_games import EpicGamesRunner
-import os
+from runners.steam import SteamRunner
+from runners.battlenet import BattleNetRunner
 
 
 class AGamersScript:
-    def __init__(self, installers_output_dir: str) -> None:
-        self.installers_output_dir = installers_output_dir
-        downloads_dir = self.__constuct_download_dir_path__()
-        self.runners: List[Runner] = [
-            EpicGamesRunner(downloads_dir)
-        ]
+    """Main runner class for a gamers script
 
-    def __constuct_download_dir_path__(self) -> Path:
-        path = Path(self.installers_output_dir)
-        if not path.exists():
-            path.mkdir(parents=True, exist_ok=True)
-        return path
+        This class holds starts off the list of runners that
+        will go out and download the installers.
+    """
+    def __init__(self) -> None:
+        self.runners: List[Runner] = [
+            # EpicGamesRunner(),
+            # SteamRunner(),
+            BattleNetRunner()
+        ]
 
     def start(self) -> None:
         logging.info("Starting runners")

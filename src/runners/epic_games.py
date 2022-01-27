@@ -1,21 +1,21 @@
 import logging
-from pathlib import Path
-from time import sleep
+
+from selenium.webdriver.remote.webelement import WebElement
 
 from .runner import Runner
 
 class EpicGamesRunner(Runner):
-    def __init__(self, download_directory: Path) -> None:
-        """Epic Games installer runner.
-
-        Args:
-            download_directory (Path): path to place the installer into.
-        """
-        super().__init__(headless=False)
-        self.download_directory = download_directory
+    def __init__(self) -> None:
+        """Epic Games installer runner."""
+        super().__init__(headless=True)
     
-    def download_dependency(self) -> None:
+    def get_installer_element(self) -> WebElement:
         logging.info('Downloading Epic Games installer')
-        self.browser.get('https://github.com/')
-        sleep(2)
+        self.browser.get('https://www.epicgames.com/store/en-US/download')
+        epic_games_as = self.browser.find_elements_by_tag_name('a')
+        download_buttons = list(filter(lambda ele: str(ele.get_attribute('href')).endswith('EpicGamesLauncherInstaller.msi'), epic_games_as))
         
+        if not download_buttons:
+            return None
+
+        return download_buttons[0]
