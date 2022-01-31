@@ -4,19 +4,25 @@ from runners.runner import Runner
 from runners.epic_games import EpicGamesRunner
 from runners.steam import SteamRunner
 from runners.battlenet import BattleNetRunner
+from runners.geforce_experience import GeForceExperienceRunner
+from runners.discord import DiscordRunner
+from runners.afterburner import MSIAfterburnerRunner
 
 
 class AGamersScript:
-    """Main runner class for a gamers script
+    """Main runner class for a gamers script.
 
-        This class holds starts off the list of runners that
+        This class holds and starts off the list of runners that
         will go out and download the installers.
     """
     def __init__(self) -> None:
         self.runners: List[Runner] = [
-            # EpicGamesRunner(),
-            # SteamRunner(),
-            BattleNetRunner()
+            EpicGamesRunner(),
+            SteamRunner(),
+            BattleNetRunner(),
+            GeForceExperienceRunner(),
+            DiscordRunner(),
+            MSIAfterburnerRunner()
         ]
 
     def start(self) -> None:

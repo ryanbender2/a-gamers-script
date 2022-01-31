@@ -25,8 +25,13 @@ class Runner(ABC, threading.Thread):
         settings = get_settings()
         self.installers_output_dir = settings.installers_output_directory
 
-        prefs = { 'download.default_directory': settings.installers_output_directory }
+        prefs = {
+            'download.default_directory': settings.installers_output_directory,
+            'download.prompt_for_download': False,
+            'safebrowsing.enabled': True
+        }
         options.add_experimental_option('prefs', prefs)
+        options.add_argument('--safebrowsing-disable-download-protection')
 
         self.browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     
@@ -38,6 +43,7 @@ class Runner(ABC, threading.Thread):
     
     def __wait_for_download__(self, download_button: WebElement) -> None:
         download_button.click()
+        time.sleep(2)
         dl_wait = True
         while dl_wait:
             time.sleep(1)

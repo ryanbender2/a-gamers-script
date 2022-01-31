@@ -5,8 +5,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from .runner import Runner
 
 class EpicGamesRunner(Runner):
+    """Epic Games installer runner."""
     def __init__(self) -> None:
-        """Epic Games installer runner."""
         super().__init__(headless=True)
     
     def get_installer_element(self) -> WebElement:
