@@ -1,7 +1,3 @@
-# A Gamer's Script
-## Author: Ryan Bender
-
-This script downloads all of the gamer essential installers.
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -33,23 +29,21 @@ This script downloads all of the gamer essential installers.
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/ryanbender2/a-gamers-script">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">A-Gamers-Script</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A downloader for all of a gamer's essential installers!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ryanbender2/a-gamers-script"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/ryanbender2/a-gamers-script/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/ryanbender2/a-gamers-script/issues">Request Feature</a>
   </p>
 </div>
 
@@ -105,16 +99,9 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Python](https://www.python.org/)
+* [Selenium](https://www.selenium.dev/)
+* [ChromeDriver](https://chromedriver.chromium.org/home)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -225,32 +212,24 @@ Project Link: [https://github.com/ryanbender2/a-gamers-script](https://github.co
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [SergeyPirogov's Python Webdriver Manager](https://github.com/SergeyPirogov/webdriver_manager)
+* [Freepik - Flaticon](https://www.flaticon.com/free-icons/installation)
+* [othneildrew's README Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ryanbender2/a-gamers-script.svg?style=for-the-badge
 [contributors-url]: https://github.com/ryanbender2/a-gamers-script/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/ryanbender2/a-gamers-script.svg?style=for-the-badge
 [forks-url]: https://github.com/ryanbender2/a-gamers-script/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/ryanbender2/a-gamers-script.svg?style=for-the-badge
 [stars-url]: https://github.com/ryanbender2/a-gamers-script/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ryanbender2/a-gamers-script.svg?style=for-the-badge
 [issues-url]: https://github.com/ryanbender2/a-gamers-script/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ryanbender2/a-gamers-script.svg?style=for-the-badge
 [license-url]: https://github.com/ryanbender2/a-gamers-script/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/ryan-bender-20a5a8154/
