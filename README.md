@@ -1,30 +1,11 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -44,10 +25,10 @@
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Report Bug</a>
     ·
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Request Feature</a>
+    <br />
+    <a href="https://github.com/ryanbender2/a-gamers-script/raw/main/AGamersScript.exe">Download!</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -60,13 +41,14 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#building-and-running">Building and Running</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prepare-environment">Prepare Environment</a></li>
+        <li><a href="#build-exe">Build exe</a></li>
+        <li><a href="#run-in-terminal">Run in terminal</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -82,16 +64,17 @@
 
 [![AGamersScript][product-screenshot]](https://github.com/ryanbender2/a-gamers-script)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Are you an gamer? Do you find yourself frequently building new PC's or getting new laptops? Does it get annoying having to constantly go out and download all of those installers for all your devices and games? Well this is the app for you! Built with gamer's in mind, this app does one thing, and one thing only, download all those pesky installers. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Here are the current installers the AGamersScript will go and get:
+* [AfterBurner](https://www.msi.com/Landing/afterburner/graphics-cards)
+* [Battle.net](https://www.blizzard.com/en-us/)
+* [Discord](https://discord.com/)
+* [Epic Games](https://www.epicgames.com/store/en-US/)
+* [Geforce Experience](https://www.nvidia.com/en-us/geforce/geforce-experience/)
+* [Steam](https://store.steampowered.com/)
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+If you want to suggest an installer to be added, please add a [feature request](https://github.com/ryanbender2/a-gamers-script/issues)!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -108,47 +91,43 @@ Use the `BLANK_README.md` to get started.
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Building and Running
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+If you're a pythonista and want to play around with the code for the project, here's some docs to get you started.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Python is the only prerequisite you need!
 
-### Installation
+* [Python](https://www.python.org/)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Prepare environment
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Create the virtual environment
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   dev_create_env.bat
    ```
-3. Install NPM packages
+2. Use the environment
    ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   ./env/Scripts/activate
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Build exe
 
+1. Ensure you have and are using the virtual environment as described above
+2. Run the build script
+   ```sh
+   ./build.bat
+   ```
+   This script will build the executable and place it in a dist directory.
 
+### Run in terminal
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Ensure you have and are using the virtual environment as described above
+2. Run the `main.py` file
+   ```sh
+   python ./src/main.py
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -157,15 +136,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Add initial project
+- [ ] Add GUI
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ryanbender2/a-gamers-script/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
