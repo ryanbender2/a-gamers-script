@@ -19,7 +19,7 @@
   <p align="center">
     A downloader for all of a gamer's essential installers!
     <br />
-    <a href="https://github.com/ryanbender2/a-gamers-script/releases/download/v1.0.0/AGamersScript.exe"><strong>Download</strong></a>
+    <a href="https://github.com/ryanbender2/a-gamers-script/releases/download/v1.0.0/AGamersScript.exe"><strong>Release v1.0.0</strong></a>
     <br />
     <br />
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Report Bug</a>
