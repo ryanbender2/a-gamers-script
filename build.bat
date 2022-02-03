@@ -11,5 +11,5 @@ pyinstaller ^
 --hidden-import="selenium" ^
 --hidden-import="selenium.webdriver.remote.webelement" ^
 --hidden-import="webdriver_manager.chrome" ^
---icon="./app.ico" ^
+--icon="./images/app.ico" ^
 "./src/main.py"
