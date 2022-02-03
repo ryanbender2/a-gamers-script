@@ -21,12 +21,12 @@
     <br />
     <a href="https://github.com/ryanbender2/a-gamers-script"><strong>Explore the docs »</strong></a>
     <br />
+    <a href="https://github.com/ryanbender2/a-gamers-script/raw/main/AGamersScript.exe">Download!</a>
+    <br />
     <br />
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Report Bug</a>
     ·
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Request Feature</a>
-    <br />
-    <a href="https://github.com/ryanbender2/a-gamers-script/raw/main/AGamersScript.exe">Download!</a>
   </p>
 </div>
 
