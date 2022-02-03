@@ -2,8 +2,7 @@ import time
 import threading
 from abc import ABC, abstractmethod
 import os
-
-from settings import get_settings
+from pathlib import Path
 
 from selenium import webdriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -22,11 +21,11 @@ class Runner(ABC, threading.Thread):
         options = webdriver.ChromeOptions()
         options.headless = headless
 
-        settings = get_settings()
-        self.installers_output_dir = settings.installers_output_directory
+        installers_dir_path = Path('./AGamersInstallers')
+        self.installers_output_dir = str(installers_dir_path.absolute())
 
         prefs = {
-            'download.default_directory': settings.installers_output_directory,
+            'download.default_directory': self.installers_output_dir,
             'download.prompt_for_download': False,
             'safebrowsing.enabled': True
         }
