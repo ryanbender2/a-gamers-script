@@ -1,4 +1,9 @@
-pyinstaller --noconfirm --onefile --console ^
+pyinstaller ^
+--noconfirm ^
+--onefile ^
+--console ^
+--clean ^
+--name="AGamersScript" ^
 --add-data "./src/runners;runners/" ^
 --add-data "./src/__init__.py;." ^
 --add-data "./src/agamersscript.py;." ^
@@ -6,4 +11,5 @@ pyinstaller --noconfirm --onefile --console ^
 --hidden-import="selenium" ^
 --hidden-import="selenium.webdriver.remote.webelement" ^
 --hidden-import="webdriver_manager.chrome" ^
+--icon="./app.ico" ^
 "./src/main.py"
