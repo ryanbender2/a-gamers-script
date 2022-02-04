@@ -71,6 +71,7 @@ Here are the current installers the AGamersScript will go and get:
 * [Epic Games](https://www.epicgames.com/store/en-US/)
 * [Geforce Experience](https://www.nvidia.com/en-us/geforce/geforce-experience/)
 * [Steam](https://store.steampowered.com/)
+* [Intel Extreme Tuning Utility](https://www.intel.com/content/www/us/en/download/17881/intel-extreme-tuning-utility-intel-xtu.html)
 
 If you want to suggest an installer to be added, please add a [feature request](https://github.com/ryanbender2/a-gamers-script/issues)!
 
