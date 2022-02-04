@@ -1,5 +1,6 @@
 import time
 import threading
+import logging
 from abc import ABC, abstractmethod
 import os
 from pathlib import Path
@@ -10,13 +11,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class Runner(ABC, threading.Thread):
     """Base runner class."""
-    def __init__(self, headless=True) -> None:
+    def __init__(self, installer_name: str, headless=True) -> None:
         """Base dependency downloader runner class.
 
         Args:
+            installer_name (str): The installer's name being downloaded.
             headless (bool, optional): headless chrome browser. Defaults to True.
         """
         super().__init__()
+
+        self.installer_name = installer_name
 
         options = webdriver.ChromeOptions()
         options.headless = headless
@@ -37,7 +41,9 @@ class Runner(ABC, threading.Thread):
     def run(self) -> None:
         download_button = self.get_installer_element()
         if download_button is not None:
+            logging.info(f'Started downloading {self.installer_name}!')
             self.__wait_for_download__(download_button)
+            logging.info(f'Finished downloading {self.installer_name}!')
         self.browser.close()
     
     def __wait_for_download__(self, download_button: WebElement) -> None:

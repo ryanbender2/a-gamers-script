@@ -8,10 +8,10 @@ from .runner import Runner
 class DiscordRunner(Runner):
     """Discord installer runner."""
     def __init__(self) -> None:
-        super().__init__(headless=True)
+        super().__init__('Discord')
     
     def get_installer_element(self) -> WebElement:
-        logging.info('Downloading Discord installer')
+        logging.info('Starting Discord')
         self.browser.get('https://discord.com/download')
 
         website_as = self.browser.find_elements(By.TAG_NAME, 'a')

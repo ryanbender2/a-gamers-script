@@ -7,10 +7,10 @@ from .runner import Runner
 class SteamRunner(Runner):
     """Steam installer runner."""
     def __init__(self) -> None:
-        super().__init__(headless=True)
+        super().__init__('Steam')
     
     def get_installer_element(self) -> WebElement:
-        logging.info('Downloading Steam installer')
+        logging.info('Starting Steam')
         self.browser.get('https://store.steampowered.com/about/')
         
         website_as = self.browser.find_elements_by_tag_name('a')

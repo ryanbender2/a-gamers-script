@@ -9,10 +9,10 @@ from .runner import Runner
 class MSIAfterburnerRunner(Runner):
     """MSI Afterburner installer runner."""
     def __init__(self) -> None:
-        super().__init__(headless=True)
+        super().__init__('MSI Afterburner')
     
     def get_installer_element(self) -> WebElement:
-        logging.info('Downloading MSI Afterburner installer')
+        logging.info('Starting MSI Afterburner')
         self.browser.get('https://www.msi.com/Landing/afterburner/graphics-cards')
 
         website_as = self.browser.find_elements(By.TAG_NAME, 'a')

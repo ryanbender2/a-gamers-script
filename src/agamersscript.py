@@ -7,6 +7,7 @@ from runners.battlenet import BattleNetRunner
 from runners.geforce_experience import GeForceExperienceRunner
 from runners.discord import DiscordRunner
 from runners.afterburner import MSIAfterburnerRunner
+from runners.intel_xtu import IntelXTURunner
 
 
 class AGamersScript:
@@ -22,7 +23,8 @@ class AGamersScript:
             BattleNetRunner(),
             GeForceExperienceRunner(),
             DiscordRunner(),
-            MSIAfterburnerRunner()
+            MSIAfterburnerRunner(),
+            IntelXTURunner()
         ]
 
     def start(self) -> None:

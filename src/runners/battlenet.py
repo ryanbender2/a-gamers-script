@@ -9,10 +9,10 @@ from .runner import Runner
 class BattleNetRunner(Runner):
     """Battle.net installer runner."""
     def __init__(self) -> None:
-        super().__init__(headless=True)
+        super().__init__('Battle.net')
     
     def get_installer_element(self) -> WebElement:
-        logging.info('Downloading Battle.net installer')
+        logging.info('Starting Battle.net')
         self.browser.get('https://www.blizzard.com/en-us/download?product=bnetdesk')
         
         battle_net_desktop_button = self.browser.find_element(By.ID, 'bnetdesk')
