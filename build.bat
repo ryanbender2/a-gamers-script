@@ -1,7 +1,7 @@
 pyinstaller ^
 --noconfirm ^
 --onefile ^
---noconsole ^
+--windowed ^
 --clean ^
 --name="AGamersScript" ^
 --add-data "./src/runners;runners/" ^
@@ -9,6 +9,7 @@ pyinstaller ^
 --add-data "./src/agamersscript.py;." ^
 --add-data "./src/ui.py;." ^
 --add-data "./src/logger.py;." ^
+--add-data "./images;images/" ^
 --hidden-import="PIL" ^
 --hidden-import="PIL.ImageTk" ^
 --hidden-import="tkinter" ^

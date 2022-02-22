@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL.ImageTk import PhotoImage
 from PIL import Image
+import os
 
 
 class AGamersScriptUI(tk.Frame):
@@ -12,11 +13,23 @@ class AGamersScriptUI(tk.Frame):
         
         self.app_width = 750
         self.app_height = 400
-        self.animation_path = 'images\\working-gif.gif'
+
+        self.animation_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images\\working-gif.gif'))
+
+        # needed for running in dev
+        if 'src\\images\\working-gif.gif' in self.animation_path:
+            self.animation_path = self.animation_path.replace('src\\', '')
 
         self.root.title("A Gamer's Script")
         self.root.geometry(self._get_geometry())
-        self.root.iconbitmap('images\\app.ico')
+
+        app_icon = os.path.abspath(os.path.join(os.path.dirname(__file__), 'images\\app.ico'))
+
+        # needed for running in dev
+        if 'src\\images\\app.ico' in app_icon:
+            app_icon = app_icon.replace('src\\', '')
+
+        self.root.iconbitmap(app_icon)
         self.init_interface()
 
     def _get_geometry(self) -> str:
