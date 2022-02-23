@@ -62,6 +62,10 @@
 
 <center>[![AGamersScript][product-screenshot]](https://github.com/ryanbender2/a-gamers-script)</center>
 
+<p align="center">
+  <img src='images/screenshot.gif'>
+</p>
+
 Are you an gamer? Do you find yourself frequently building new PCs or getting new laptops? Does it get annoying having to constantly go out and download all of those installers for all your devices and games? Well this is the app for you! Built with gamer's in mind, this app does one thing, and one thing only, download all those pesky installers. 
 
 Here are the current installers the AGamersScript will go and get:
