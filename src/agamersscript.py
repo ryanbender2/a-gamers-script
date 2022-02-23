@@ -1,5 +1,6 @@
 import logging
 from typing import List
+from multiprocessing import Process
 from runners.runner import Runner
 from runners.epic_games import EpicGamesRunner
 from runners.steam import SteamRunner
@@ -10,6 +11,16 @@ from runners.afterburner import MSIAfterburnerRunner
 from runners.intel_xtu import IntelXTURunner
 
 
+def run_runner(runner_cls: Runner) -> None:
+    """Run an installer script (Runner) thread.
+
+    Args:
+        runner_cls (Runner): runner clazz
+    """
+    runner = runner_cls()
+    runner.start()
+    runner.join()
+
 class AGamersScript:
     """Main runner class for a gamers script.
 
@@ -17,15 +28,18 @@ class AGamersScript:
         will go out and download the installers.
     """
     def __init__(self) -> None:
-        self.runners: List[Runner] = [
-            EpicGamesRunner(),
-            SteamRunner(),
-            BattleNetRunner(),
-            GeForceExperienceRunner(),
-            DiscordRunner(),
-            MSIAfterburnerRunner(),
-            IntelXTURunner()
+        runner_clses: List[Runner] = [
+            EpicGamesRunner,
+            SteamRunner,
+            BattleNetRunner,
+            GeForceExperienceRunner,
+            DiscordRunner,
+            MSIAfterburnerRunner,
+            IntelXTURunner
         ]
+
+        """Processes to run the runners."""
+        self.runners: List[Process] = [Process(target=run_runner, args=(runner_cls, )) for runner_cls in runner_clses]
 
     def start(self) -> None:
         logging.info("Starting runners")

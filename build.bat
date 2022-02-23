@@ -1,13 +1,18 @@
 pyinstaller ^
 --noconfirm ^
 --onefile ^
---console ^
+--windowed ^
 --clean ^
 --name="AGamersScript" ^
 --add-data "./src/runners;runners/" ^
 --add-data "./src/__init__.py;." ^
 --add-data "./src/agamersscript.py;." ^
+--add-data "./src/ui.py;." ^
 --add-data "./src/logger.py;." ^
+--add-data "./images;images/" ^
+--hidden-import="PIL" ^
+--hidden-import="PIL.ImageTk" ^
+--hidden-import="tkinter" ^
 --hidden-import="selenium" ^
 --hidden-import="selenium.webdriver.remote.webelement" ^
 --hidden-import="selenium.webdriver.support.expected_conditions" ^

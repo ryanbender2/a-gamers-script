@@ -36,6 +36,8 @@ class Runner(ABC, threading.Thread):
         options.add_experimental_option('prefs', prefs)
         options.add_argument('--safebrowsing-disable-download-protection')
 
+        options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
         self.browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     
     def run(self) -> None:
