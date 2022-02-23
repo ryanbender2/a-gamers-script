@@ -5,6 +5,23 @@ from agamersscript import AGamersScript
 import multiprocessing
 from ui import AGamersScriptUI
 
+"""
+Dev note:
+There is something wrong with selenium where
+you have you modify a variable in its source
+to stop the console windows from opening for
+the chromedrivers. It is located here:
+python\Lib\site-packages\selenium\webdriver\common\service.py
+
+Here:
+self.process = subprocess.Popen(cmd, env=self.env,
+                                close_fds=system() != 'Windows',
+                                stdout=self.log_file,
+                                stderr=self.log_file,
+                                stdin=PIPE,
+                                creationflags=0x08000000)
+Update the creationflags kwarg to the value 0x08000000 as seen above.
+"""
 
 def start_agamersscript() -> None:
     """start off the main class for downloading the installers."""
