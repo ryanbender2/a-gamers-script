@@ -14,12 +14,12 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">A-Gamers-Script</h3>
+  <h3 align="center">A Gamer's Script</h3>
 
   <p align="center">
     A downloader for all of a gamer's essential installers!
     <br />
-    <a href="https://github.com/ryanbender2/a-gamers-script/releases/tag/v1.1.0"><strong>Latest Release</strong></a>
+    <a href="https://github.com/ryanbender2/a-gamers-script/releases/tag/v2.0.0"><strong>Latest Release</strong></a>
     <br />
     <br />
     <a href="https://github.com/ryanbender2/a-gamers-script/issues">Report Bug</a>
@@ -206,4 +206,4 @@ Project Link: [https://github.com/ryanbender2/a-gamers-script](https://github.co
 [license-url]: https://github.com/ryanbender2/a-gamers-script/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/ryan-bender-20a5a8154/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot.gif
