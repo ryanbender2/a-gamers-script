@@ -1,5 +1,5 @@
 import logging
-from typing import List
+from typing import List, Type
 from multiprocessing import Process
 from runners.runner import Runner
 from runners.epic_games import EpicGamesRunner
@@ -11,7 +11,7 @@ from runners.afterburner import MSIAfterburnerRunner
 from runners.intel_xtu import IntelXTURunner
 
 
-def run_runner(runner_cls: Runner) -> None:
+def run_runner(runner_cls: Type[Runner]) -> None:
     """Run an installer script (Runner) thread.
 
     Args:
@@ -19,7 +19,6 @@ def run_runner(runner_cls: Runner) -> None:
     """
     runner = runner_cls()
     runner.start()
-    runner.join()
 
 class AGamersScript:
     """Main runner class for a gamers script.

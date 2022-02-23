@@ -12,7 +12,7 @@ a = Analysis(['src\\main.py'],
                 ('./src/__init__.py', '.'),
                 ('./src/agamersscript.py', '.'),
                 ('./src/ui.py', '.'),
-                ('./src/logger.py', '.'),
+                ('./src/utils.py', '.'),
                 ('./images', 'images/')
             ],
             hiddenimports=[

@@ -1,5 +1,4 @@
 import time
-import threading
 import logging
 from abc import ABC, abstractmethod
 import os
@@ -9,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.remote.webelement import WebElement
 from webdriver_manager.chrome import ChromeDriverManager
 
-class Runner(ABC, threading.Thread):
+class Runner(ABC):
     """Base runner class."""
     def __init__(self, installer_name: str, headless=True) -> None:
         """Base dependency downloader runner class.
@@ -18,8 +17,6 @@ class Runner(ABC, threading.Thread):
             installer_name (str): The installer's name being downloaded.
             headless (bool, optional): headless chrome browser. Defaults to True.
         """
-        super().__init__()
-
         self.installer_name = installer_name
 
         options = webdriver.ChromeOptions()
@@ -38,9 +35,10 @@ class Runner(ABC, threading.Thread):
 
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-        self.browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+        self.browser = webdriver.Chrome(ChromeDriverManager(print_first_line=False).install(), options=options)
     
-    def run(self) -> None:
+    def start(self) -> None:
+        """Main start method. Start the runner off to download installer."""
         download_button = self.get_installer_element()
         if download_button is not None:
             logging.info(f'Started downloading {self.installer_name}!')
